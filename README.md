@@ -1,6 +1,10 @@
 # rockpaperscissors
 A great Website that allows you to play the classic Rock-Paper-Scissors game against the computer!!
 
+
+**Link to project:** https://github.com/suleymanhasoglu/rockpaperscissors/README.md
+      
+
 ## How It's Made:
 
 **Tech used:** HTML, CSS, JavaScript 
