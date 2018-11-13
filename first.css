@@ -1,0 +1,61 @@
+body {
+  font-family: tahoma;
+  font-size: 20px;
+  text-align: center;
+  background: white;
+  color: navy;
+  margin: 4em;
+}
+
+bold1 {
+  font-weight: bold;
+  color:green;
+}
+
+bold2 { 
+  color:red;
+}
+
+button {
+  background: maroon;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-family: tahoma;
+  font-weight: bold;
+}
+button:active {
+  background: green;
+}
+
+.score {
+  width: 14em;
+  margin: auto;
+  
+}
+.score h2,h3 {
+  color:green;
+  margin: 0;
+  padding: 10px;
+}
+
+
+.score table {
+  margin: 10px auto;
+  width: 100%;
+  
+  border: 3px solid green;
+}
+.score th, .score td {
+  text-align: center;
+  color : maroon;
+}
+.score td {
+  font-size: 40px;
+  padding: 0 20px;
+}
+
+#status {
+  margin-top: 20px;
+}
