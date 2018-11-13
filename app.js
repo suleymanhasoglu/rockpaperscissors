@@ -1,20 +1,21 @@
-var score={player:0,
-		   computer:0,
-		   computerChoice:''		   		   
-	      } 	
+var score={	player:0,
+			computer:0,
+			computerChoice:''		   		   
+		  }
+		   	
 
 // When user clicks on a button, Run related function
-document.getElementById("rock").onclick=playerSelectRock;
+document.getElementById('rock').onclick=playerSelectRock;
 function playerSelectRock(){		
-	findWinner(getRandomSelection(),"rock");
+	findWinner(getRandomSelection(),'rock');
 }
-document.getElementById("scissors").onclick=playerSelectScissors;
+document.getElementById('scissors').onclick=playerSelectScissors;
 function playerSelectScissors(){	
-	findWinner(getRandomSelection(),"scissors");
+	findWinner(getRandomSelection(),'scissors');
 }
-document.getElementById("paper").onclick=playerSelectPaper;
+document.getElementById('paper').onclick=playerSelectPaper;
 function playerSelectPaper(){	
-	findWinner(getRandomSelection(),"paper");
+	findWinner(getRandomSelection(),'paper');
 }
 
 // Computer randomly makes a selection 
@@ -24,12 +25,12 @@ function playerSelectPaper(){
 
 function getRandomSelection(){
 	var randomNumber=Math.random()*100;
-	score.computerChoice="rock";
+	score.computerChoice='rock';
 	if(randomNumber<=33){
-		score.computerChoice="scissors";
+		score.computerChoice='scissors';
 	}
 	else if(randomNumber>66){
-		score.computerChoice="paper";
+		score.computerChoice='paper';
 	}
 	return score.computerChoice;
 }
@@ -40,20 +41,14 @@ function getRandomSelection(){
 
 function findWinner(computerChoice,playerChoice){	
 	if ( playerChoice === computerChoice) {		
-		displayScoreMessage("Tie");
+		displayScoreMessage('Tie');
 	} else {
 		var whoWins = {
-			"rock": "scissors",
-			"scissors": "paper",
-			"paper": "'rock"
+			'rock': 'scissors',
+			'scissors': 'paper',
+			'paper': 'rock'
 		};						
-		//(whoWins[playerChoice] === computerChoice) ? increasePlayerScore() : increaseComputerScore();		
-		if (whoWins[playerChoice] === computerChoice) {
-			increasePlayerScore();
-		}
-		else {
-			increaseComputerScore();
-		}
+		(whoWins[playerChoice] === computerChoice) ? increasePlayerScore() : increaseComputerScore();				
 	}
 }
 
@@ -61,15 +56,15 @@ function findWinner(computerChoice,playerChoice){
 
 function increaseComputerScore(){
 	score.computer+=1;
-	document.getElementById("computerScore").innerHTML=score.computer;
-	displayScoreMessage("You lost, because computer selected "+score.computerChoice);
+	document.getElementById('computerScore').innerHTML=score.computer;
+	displayScoreMessage('You lost, because computer selected '+score.computerChoice);
 }
 function increasePlayerScore(){
 	score.player+=1;
-	document.getElementById("playerScore").innerHTML=score.player;
-	displayScoreMessage("You won! because computer selected "+score.computerChoice);
+	document.getElementById('playerScore').innerHTML=score.player;
+	displayScoreMessage('You won! because computer selected '+score.computerChoice);
 }
 
 function displayScoreMessage(msg){
-	document.getElementById("status").innerHTML=msg;
+	document.getElementById('status').innerHTML=msg;
 }
